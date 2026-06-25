@@ -98,6 +98,10 @@
     .trusted-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
     .trusted-logos { display: flex; align-items: center; gap: 38px; flex-wrap: wrap; }
     .trusted-name { font-size: 17px; font-weight: 600; color: var(--text); opacity: 0.55; }
+    .trusted-logo-item { display: flex; align-items: center; }
+    .trusted-logo-img { height: 28px; width: auto; max-width: 110px; object-fit: contain; filter: grayscale(1); opacity: 0.5; transition: filter 0.2s, opacity 0.2s; }
+    .trusted-logo-item:hover .trusted-logo-img { filter: none; opacity: 0.9; }
+    .trusted-logo-item:hover .trusted-name { opacity: 0.9; }
 
     /* Section */
     .section { padding: 112px 0; }
@@ -146,9 +150,16 @@
     .pub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
     .pub-card { background: white; padding: 36px 38px 40px; display: flex; flex-direction: column; gap: 13px; transition: background 0.22s; }
     .pub-card:hover { background: var(--bg-teal); }
+    .pub-card-featured { grid-column: 1 / -1; border-left: 3px solid var(--teal); padding-left: 35px; }
+    .pub-card-featured .pub-title { font-size: 20px; }
     .pub-outlet { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); }
     .pub-title { font-size: 18px; color: var(--text); font-weight: 500; line-height: 1.4; flex: 1; }
     .pub-arrow { font-size: 15px; color: var(--teal); }
+    /* Work press link */
+    .work-press { display: flex; align-items: center; gap: 8px; }
+    .work-press-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .work-press-link { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; color: var(--teal); letter-spacing: 0.04em; transition: opacity 0.2s; }
+    .work-press-link:hover { opacity: 0.7; }
 
     /* Contact */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
@@ -252,12 +263,30 @@
     <div class="trusted-row">
       <p class="trusted-label">Trusted across African tech, climate &amp; finance</p>
       <div class="trusted-logos">
-        <span class="trusted-name">Holocene</span>
-        <span class="trusted-name">Pngme</span>
-        <span class="trusted-name">Cycle Capital</span>
-        <span class="trusted-name">ABSA</span>
-        <span class="trusted-name">Kuda</span>
-        <span class="trusted-name">Tomo Credit</span>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/holocene.africa" alt="Holocene" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Holocene</span>
+        </div>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/pngme.com" alt="Pngme" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Pngme</span>
+        </div>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/premise.com" alt="Premise Data" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Premise Data</span>
+        </div>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/cyclecapital.com" alt="Cycle Capital" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Cycle Capital</span>
+        </div>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/tomocredit.com" alt="Tomo Credit" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Tomo Credit</span>
+        </div>
+        <div class="trusted-logo-item">
+          <img src="https://logo.clearbit.com/forbes.com" alt="Forbes" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="trusted-name" style="display:none">Forbes</span>
+        </div>
       </div>
     </div>
   </div>
@@ -333,6 +362,10 @@
         <span class="work-client">Pngme · Financial Data</span>
         <h3>Commercial expansion across five African markets.</h3>
         <p>Led go-to-market and built data governance frameworks adopted by financial institutions across Nigeria, Kenya, Ghana, Uganda, and Zambia — strengthening compliance readiness and institutional capacity.</p>
+        <div class="work-press">
+          <span class="work-press-label">Press</span>
+          <a class="work-press-link" href="https://techcrunch.com/2021/08/17/african-fintech-pngme-raises-15m-for-its-financial-data-infrastructure-platform/" target="_blank" rel="noopener noreferrer">TechCrunch — Pngme raises $15M Series A →</a>
+        </div>
         <div class="work-metrics">
           <div><div class="metric-n">5</div><div class="metric-l">markets entered</div></div>
           <div><div class="metric-n metric-n-sm">ABSA · DTB · Kuda</div><div class="metric-l">institutions adopted</div></div>
@@ -372,13 +405,14 @@
         <p class="founder-eyebrow">Founder</p>
         <h2 class="founder-name">Ankit Mishra</h2>
         <p class="founder-title">Founder &amp; Principal · Forbes Contributor</p>
-        <p class="founder-bio">Ankit founded AM Consulting Group after 13+ years building go-to-market systems across African and global markets. A Forbes contributor with 50+ published articles, he was Head of Growth on the founding teams at Pngme and Alariss Global, and has served as fractional Chief AI Officer and growth advisor to climate, fintech, and logistics ventures.</p>
-        <p class="founder-bio">Today he leads commercial and AI transformation across Holocene's 14-company portfolio, partnering directly with C-suite leaders. His commentary appears on CBC, Financial Post, and Ticker News, and he coaches early-stage founders as Entrepreneur-in-Residence at Ivey Business School.</p>
+        <p class="founder-bio">Ankit founded AM Consulting Group after 13+ years building go-to-market systems across African and global markets. A Forbes contributor with 50+ published articles, he held Head of Growth roles on the founding teams at Pngme and Alariss Global — including during Pngme's $15M Series A. Earlier, he led socioeconomic data operations across 140+ countries at Premise Data, and served as Economist at the OECD &amp; IEA in Paris.</p>
+        <p class="founder-bio">Today he leads commercial and AI transformation across Holocene's 14-company portfolio as fractional Chief AI Officer, partnering directly with C-suite leaders. He is a Member of the Schwartz Reisman Institute AI &amp; Trust Working Group at U of Toronto — where he built the AI Trajectory Index, scoring 186 economies on AI readiness. He coaches founders as EIR at Ivey Business School and Mentor at McGill's TechAccel accelerator.</p>
         <div class="founder-tags">
           <span class="founder-tag">Forbes</span>
           <span class="founder-tag">Holocene VC</span>
           <span class="founder-tag">Schwartz Reisman Institute · U of T</span>
           <span class="founder-tag">Ivey Business School · EIR</span>
+          <span class="founder-tag">McGill · TechAccel</span>
           <span class="founder-tag">Sciences Po Paris</span>
           <span class="founder-tag">OECD · IEA · NATO</span>
         </div>
@@ -398,6 +432,11 @@
       <p>Forbes contributor covering AI, cleantech, and emerging market energy systems since 2020. Regular media commentary on CBC Radio, Financial Post, and Ticker News. Previously TechCrunch and NextBillion.</p>
     </div>
     <div class="pub-grid" data-fade>
+      <a class="pub-card pub-card-featured" href="https://techcrunch.com/2021/08/17/african-fintech-pngme-raises-15m-for-its-financial-data-infrastructure-platform/" target="_blank" rel="noopener noreferrer">
+        <span class="pub-outlet">TechCrunch · Aug 2021</span>
+        <span class="pub-title">African Fintech Pngme Raises $15M For Its Financial Data Infrastructure Platform</span>
+        <span class="pub-arrow">→</span>
+      </a>
       <a class="pub-card" href="https://www.forbes.com/sites/ankitmishra/2025/08/06/decarbonizing-the-industrial-sector-can-ai-catalyze-global-progress/" target="_blank" rel="noopener noreferrer">
         <span class="pub-outlet">Forbes · Aug 2025</span>
         <span class="pub-title">Decarbonizing The Industrial Sector: Can AI Catalyze Global Progress?</span>
