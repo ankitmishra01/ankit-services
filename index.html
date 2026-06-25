@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit Mishra — Product Marketing for African Fintech &amp; Cleantech</title>
-  <meta name="description" content="AI-native product marketing, GTM strategy, and venture building for African fintech and cleantech companies. Forbes contributor. Holocene VC portfolio advisor.">
-  <meta property="og:title" content="Ankit Mishra — Product Marketing for African Fintech &amp; Cleantech">
-  <meta property="og:description" content="13+ years building GTM systems and scaling AI adoption across African and global markets.">
+  <title>AM Consulting Group — Product Marketing for African Fintech &amp; Cleantech</title>
+  <meta name="description" content="AM Consulting Group is a product marketing and go-to-market firm for fintech and cleantech ventures. AI-native commercial infrastructure built for African market dynamics.">
+  <meta property="og:title" content="AM Consulting Group — Product Marketing for African Fintech &amp; Cleantech">
+  <meta property="og:description" content="We build the commercial engine behind Africa's most ambitious tech companies.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,623 +16,388 @@
     html { scroll-behavior: smooth; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
-
-    :root {
-      --navy:        #0D1B2A;
-      --navy-mid:    #1A2D42;
-      --green:       #1B5E3B;
-      --green-mid:   #246B47;
-      --green-light: #E4F2EB;
-      --green-faint: #F2F8F5;
-      --cream:       #FAFAF8;
-      --white:       #FFFFFF;
-      --text:        #1A2332;
-      --muted:       #5C6E7A;
-      --border:      #D4E0DC;
-      --serif:       'Cormorant Garamond', Georgia, serif;
-      --sans:        'DM Sans', -apple-system, system-ui, sans-serif;
-      --mono:        'DM Mono', 'Courier New', monospace;
-    }
-
     body {
-      font-family: var(--sans);
-      color: var(--text);
-      background: var(--white);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #F4F7F7;
+      color: #10242B;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
+    input, textarea, select {
+      outline: none; border-radius: 0;
+      -webkit-appearance: none; appearance: none;
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2351666E' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; cursor: pointer;
+    }
 
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
-    @media (max-width: 768px) { .wrap { padding: 0 24px; } }
+    :root {
+      --ink:     #002F3D;
+      --teal:    #2A6F85;
+      --teal-d:  #20596C;
+      --bg:      #F4F7F7;
+      --bg-teal: #EEF4F5;
+      --text:    #10242B;
+      --muted:   #51666E;
+      --border:  #D3E0E2;
+      --border2: #E0EDF0;
+      --light:   #6FB8CC;
+    }
 
-    /* ── Nav ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(250,250,248,0.92);
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
+
+    [data-fade] { opacity: 0; transform: translateY(24px); transition: opacity 0.72s ease, transform 0.72s ease; }
+    [data-fade].vis { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { [data-fade] { opacity: 1; transform: none; transition: none; } }
+
+    /* Accent bar */
+    .accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--teal); z-index: 200; pointer-events: none; }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 3px; left: 0; right: 0; z-index: 100;
+      background: rgba(244,247,247,0.92);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      padding: 18px 0;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      padding: 16px 0; transition: box-shadow 0.3s ease;
     }
     .nav-row { display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { font-size: 14px; font-weight: 600; color: var(--navy); letter-spacing: 0.01em; }
-    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--navy); }
-    .nav-cta {
-      background: var(--green) !important;
-      color: white !important;
-      padding: 8px 22px;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transition: opacity 0.2s !important;
-    }
-    .nav-cta:hover { opacity: 0.85 !important; }
+    .nav-logo { display: flex; align-items: center; gap: 13px; }
+    .nav-logo-mark { display: flex; align-items: center; justify-content: center; background: var(--ink); padding: 8px 10px; border-radius: 3px; }
+    .nav-logo-mark img { height: 22px; width: auto; }
+    .nav-brand { font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 15px; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { font-size: 14px !important; font-weight: 500; background: var(--teal); color: white !important; padding: 10px 24px; letter-spacing: 0.01em; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-d) !important; }
 
-    /* ── Hero ── */
-    .hero {
-      background: var(--cream);
-      padding-top: 80px;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 80px;
-      align-items: center;
-      padding: 64px 0;
-    }
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: clamp(38px, 5vw, 58px);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--navy);
-      margin-bottom: 24px;
-      text-wrap: balance;
-    }
-    .hero-body {
-      font-size: 17px;
-      color: var(--muted);
-      line-height: 1.7;
-      max-width: 52ch;
-      margin-bottom: 36px;
-      font-weight: 300;
-    }
+    /* Hero */
+    .hero { background: var(--ink); padding-top: 88px; position: relative; overflow: hidden; }
+    .hero-glow { position: absolute; top: 0; right: -200px; width: 680px; height: 680px; background: radial-gradient(circle, rgba(42,111,133,0.34) 0%, transparent 68%); pointer-events: none; }
+    .hero-inner { max-width: 1160px; margin: 0 auto; padding: 116px 48px 0; position: relative; }
+    .hero-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light); margin-bottom: 30px; }
+    .hero h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(46px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.022em; color: white; margin-bottom: 34px; max-width: 18ch; text-wrap: balance; }
+    .hero-body { font-size: 21px; color: rgba(255,255,255,0.68); line-height: 1.66; max-width: 60ch; margin-bottom: 46px; font-weight: 300; }
     .hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--green);
-      color: white;
-      padding: 13px 28px;
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      display: inline-block;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); }
-    .btn-ghost {
-      font-size: 14px;
-      color: var(--navy);
-      border-bottom: 1px solid var(--navy);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-ghost:hover { color: var(--green); border-color: var(--green); }
+    .btn-primary { background: var(--teal); color: white; padding: 16px 36px; font-size: 15px; font-weight: 500; display: inline-block; letter-spacing: 0.01em; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--teal-d); }
+    .btn-ghost-light { font-size: 15px; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; }
+    .btn-ghost-light:hover { color: white; border-color: rgba(255,255,255,0.6); }
+    .hero-stats-wrap { max-width: 1160px; margin: 0 auto; padding: 0 48px; position: relative; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 92px; padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.12); }
+    .stat { display: flex; flex-direction: column; gap: 10px; }
+    .stat-n { font-family: 'DM Mono', 'Courier New', monospace; font-size: 48px; color: white; letter-spacing: -0.03em; line-height: 1; }
+    .stat-l { font-size: 15px; color: rgba(255,255,255,0.56); line-height: 1.45; }
 
-    /* Photo */
-    .photo-wrap { position: relative; }
-    .photo-offset {
-      position: absolute;
-      inset: 14px 14px -14px -14px;
-      background: var(--green-light);
-      z-index: 0;
-    }
-    .photo-img {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      object-position: top center;
-    }
+    /* Trusted By */
+    .trusted { background: var(--bg); border-bottom: 1px solid var(--border); padding: 42px 0; }
+    .trusted-row { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; justify-content: space-between; }
+    .trusted-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .trusted-logos { display: flex; align-items: center; gap: 38px; flex-wrap: wrap; }
+    .trusted-name { font-size: 17px; font-weight: 600; color: var(--text); opacity: 0.55; }
 
-    /* ── Stats ── */
-    .stats-band { background: var(--navy); padding: 44px 0; }
-    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-    .stat { display: flex; flex-direction: column; gap: 5px; }
-    .stat-n {
-      font-family: var(--mono);
-      font-size: 32px;
-      color: white;
-      font-variant-numeric: tabular-nums;
-      letter-spacing: -0.02em;
-    }
-    .stat-l { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.4; }
+    /* Section */
+    .section { padding: 112px 0; }
+    .section-white { background: white; }
+    .section-teal { background: var(--bg-teal); }
+    .section-ink { background: var(--ink); }
+    .section-bg { background: var(--bg); border-top: 1px solid var(--border); }
+    .eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; }
+    h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(32px, 3.9vw, 50px); line-height: 1.12; color: var(--text); letter-spacing: -0.015em; text-wrap: balance; }
+    .section-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: end; margin-bottom: 60px; }
+    .section-hdr p { font-size: 18px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+    .section-hdr-tight { margin-bottom: 56px; }
 
-    /* ── Sections ── */
-    .section { padding: 100px 0; }
-    .section-alt { background: var(--green-faint); }
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 14px;
-    }
-    h2 {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: clamp(28px, 3.8vw, 44px);
-      line-height: 1.15;
-      color: var(--navy);
-      letter-spacing: -0.015em;
-      text-wrap: balance;
-    }
-    .section-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: end;
-      margin-bottom: 56px;
-    }
-    .section-header p { font-size: 16px; color: var(--muted); max-width: none; font-weight: 300; }
+    /* Services */
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+    .svc-card { background: white; padding: 44px 38px 54px; display: flex; flex-direction: column; gap: 20px; transition: background 0.25s; }
+    .svc-card:hover { background: var(--bg-teal); }
+    .svc-icon { color: var(--teal); flex-shrink: 0; }
+    .svc-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 26px; color: var(--text); line-height: 1.24; }
+    .svc-card p { font-size: 17px; color: var(--muted); line-height: 1.68; font-weight: 300; }
 
-    /* ── Services ── */
-    .svc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-    }
-    .svc-card {
-      background: white;
-      padding: 40px 36px 48px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      transition: background 0.2s;
-    }
-    .svc-card:hover { background: var(--cream); }
-    .svc-icon { color: var(--green); flex-shrink: 0; }
-    .svc-card h3 {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 22px;
-      color: var(--navy);
-      line-height: 1.25;
-    }
-    .svc-card p { font-size: 15px; color: var(--muted); line-height: 1.65; max-width: none; font-weight: 300; }
+    /* Work */
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .work-card { background: white; padding: 42px 42px 46px; display: flex; flex-direction: column; gap: 18px; }
+    .work-client { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); }
+    .work-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 28px; color: var(--text); line-height: 1.2; }
+    .work-card p { font-size: 16px; color: var(--muted); line-height: 1.68; font-weight: 300; flex: 1; }
+    .work-metrics { display: flex; gap: 36px; padding-top: 20px; border-top: 1px solid var(--border2); }
+    .metric-n { font-family: 'DM Mono', 'Courier New', monospace; font-size: 30px; color: var(--teal); line-height: 1; }
+    .metric-n-sm { font-size: 18px; letter-spacing: -0.01em; }
+    .metric-l { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
-    /* ── Experience ── */
-    .exp-list { display: flex; flex-direction: column; }
-    .exp-item {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 56px;
-      padding: 44px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .exp-item:first-child { border-top: 1px solid var(--border); }
-    .exp-period {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--green);
-      margin-bottom: 6px;
-    }
-    .exp-org { font-size: 13px; color: var(--muted); line-height: 1.4; }
-    .exp-role {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 21px;
-      color: var(--navy);
-      line-height: 1.3;
-      margin-bottom: 14px;
-    }
-    .exp-body { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; max-width: none; font-weight: 300; }
-    .exp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .exp-tag {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      background: var(--green-light);
-      color: var(--green);
-      padding: 4px 10px;
-    }
+    /* Founder */
+    .founder-grid { display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: center; }
+    .founder-photo { position: relative; }
+    .founder-frame { position: absolute; inset: 16px 16px -16px -16px; border: 1px solid rgba(111,184,204,0.5); z-index: 0; }
+    .founder-img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top center; }
+    .founder-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 18px; }
+    .founder-name { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(36px, 4.1vw, 56px); line-height: 1.06; color: white; letter-spacing: -0.018em; margin-bottom: 10px; }
+    .founder-title { font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: 0.07em; color: rgba(255,255,255,0.55); margin-bottom: 30px; }
+    .founder-bio { font-size: 18px; color: rgba(255,255,255,0.74); line-height: 1.76; font-weight: 300; margin-bottom: 22px; }
+    .founder-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .founder-tag { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 500; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.18); }
 
-    /* ── Publications ── */
-    .pub-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: var(--border);
-    }
-    .pub-card {
-      background: white;
-      padding: 32px 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transition: background 0.2s;
-      cursor: pointer;
-    }
-    .pub-card:hover { background: var(--cream); }
-    .pub-outlet {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green);
-    }
-    .pub-title { font-size: 16px; color: var(--navy); font-weight: 500; line-height: 1.4; flex: 1; }
-    .pub-date { font-size: 13px; color: var(--muted); }
-    .pub-arrow { font-size: 14px; color: var(--green); margin-top: 8px; }
+    /* Insights */
+    .pub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+    .pub-card { background: white; padding: 36px 38px 40px; display: flex; flex-direction: column; gap: 13px; transition: background 0.22s; }
+    .pub-card:hover { background: var(--bg-teal); }
+    .pub-outlet { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); }
+    .pub-title { font-size: 18px; color: var(--text); font-weight: 500; line-height: 1.4; flex: 1; }
+    .pub-arrow { font-size: 15px; color: var(--teal); }
 
-    /* ── Credentials ── */
-    .creds-band {
-      padding: 44px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--cream);
-    }
-    .creds-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .creds-row {
-      display: flex;
-      gap: 0;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .cred-item {
-      font-size: 13px;
-      color: var(--navy);
-      font-weight: 500;
-      padding: 6px 24px;
-      border-right: 1px solid var(--border);
-      opacity: 0.65;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-    }
-    .cred-item:last-child { border-right: none; }
-    .cred-item:hover { opacity: 1; }
-
-    /* ── Contact ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 96px;
-      align-items: start;
-    }
-    .contact-left { display: flex; flex-direction: column; gap: 0; }
-    .contact-left .eyebrow { margin-bottom: 14px; }
-    .contact-left h2 { margin-bottom: 20px; }
-    .contact-left > p { font-size: 16px; color: var(--muted); max-width: 42ch; margin-bottom: 40px; font-weight: 300; }
-    .contact-detail { margin-bottom: 20px; }
-    .cd-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green);
-      display: block;
-      margin-bottom: 4px;
-    }
-    .cd-val { font-size: 15px; color: var(--navy); }
-    .cd-link { font-size: 15px; color: var(--green); transition: opacity 0.2s; }
-    .cd-link:hover { opacity: 0.75; }
-
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
+    .contact-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; }
+    .contact-h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(32px, 3.9vw, 50px); line-height: 1.12; color: var(--text); letter-spacing: -0.015em; margin-bottom: 24px; }
+    .contact-body { font-size: 18px; color: var(--muted); max-width: 44ch; margin-bottom: 48px; font-weight: 300; line-height: 1.7; }
+    .contact-detail { margin-bottom: 24px; }
+    .cd-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: block; margin-bottom: 6px; }
+    .cd-val { font-size: 17px; color: var(--text); }
+    .cd-link { font-size: 17px; color: var(--teal); transition: opacity 0.2s; }
+    .cd-link:hover { opacity: 0.7; }
     form { display: flex; flex-direction: column; gap: 18px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .form-field { display: flex; flex-direction: column; gap: 7px; }
-    label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    input, textarea, select {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 11px 14px;
-      font-family: var(--sans);
-      font-size: 15px;
-      outline: none;
-      width: 100%;
-      border-radius: 0;
-      appearance: none;
-      -webkit-appearance: none;
-      transition: border-color 0.2s;
-    }
-    input:focus, textarea:focus, select:focus { border-color: var(--green); background: white; }
-    textarea { resize: vertical; min-height: 100px; }
-    select {
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%235C6E7A' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 36px;
-      cursor: pointer;
-    }
-    .btn-submit {
-      background: var(--green);
-      color: white;
-      padding: 13px 32px;
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      width: fit-content;
-      letter-spacing: 0.01em;
-      transition: background 0.2s;
-    }
-    .btn-submit:hover { background: var(--green-mid); }
+    .form-field { display: flex; flex-direction: column; gap: 8px; }
+    label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    input, textarea, select { background: white; border: 1px solid var(--border); color: var(--text); padding: 13px 15px; font-size: 16px; width: 100%; transition: border-color 0.2s; }
+    select { padding-right: 36px; }
+    input:focus, textarea:focus, select:focus { border-color: var(--teal); }
+    textarea { resize: vertical; min-height: 108px; }
+    .btn-submit { background: var(--teal); color: white; padding: 15px 34px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.01em; transition: background 0.2s; font-family: 'DM Sans', system-ui, sans-serif; }
+    .btn-submit:hover { background: var(--teal-d); }
 
-    /* ── Footer ── */
-    footer { background: var(--navy); padding: 36px 0; }
+    /* Footer */
+    footer { background: var(--ink); padding: 46px 0; }
     .footer-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer-brand { font-size: 16px; font-weight: 600; color: white; letter-spacing: 0.01em; }
+    .footer-copy { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 7px; }
     .footer-links { display: flex; gap: 28px; list-style: none; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.75); }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
 
-    /* ── Fade-in ── */
-    .fade { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .fade { opacity: 1; transform: none; transition: none; } }
-
-    /* ── Responsive ── */
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-      .photo-wrap { max-width: 340px; }
-      .section-header { grid-template-columns: 1fr; gap: 20px; }
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 32px 24px; }
       .svc-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-      .exp-item { grid-template-columns: 1fr; gap: 12px; }
+      .section-hdr { grid-template-columns: 1fr; gap: 16px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .founder-grid { grid-template-columns: 1fr; gap: 44px; }
+      .founder-photo { max-width: 360px; }
       .pub-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 52px; }
     }
-    @media (max-width: 640px) {
-      .nav-links li:not(:last-child) { display: none; }
+    @media (max-width: 600px) {
+      .wrap, .hero-inner, .hero-stats-wrap { padding-left: 24px; padding-right: 24px; }
       .form-row { grid-template-columns: 1fr; }
       .footer-row { flex-direction: column; }
-      .creds-row { gap: 0; }
-      .cred-item { border-right: none; border-bottom: 1px solid var(--border); width: 100%; text-align: center; }
+      .nav-links li:not(:last-child) { display: none; }
     }
   </style>
 </head>
 <body>
 
+<div class="accent-bar"></div>
+
 <!-- Nav -->
-<nav>
+<nav class="nav" id="nav">
   <div class="wrap">
     <div class="nav-row">
-      <span class="nav-brand">Ankit Mishra</span>
+      <a href="#top" class="nav-logo">
+        <span class="nav-logo-mark">
+          <img src="https://cdn.prod.website-files.com/6220ddc0aac8a36cb410714e/623c644902bb446871ff8c9a_AM-logo.svg" alt="AM" onerror="this.style.display='none'">
+        </span>
+        <span class="nav-brand">AM Consulting Group</span>
+      </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#writing">Writing</a></li>
-        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact" class="nav-cta">Work with us</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="hero-eyebrow">Product Marketing · AI Strategy · Venture Building</p>
-        <h1>Product marketing for Africa's most ambitious fintech and cleantech companies.</h1>
-        <p class="hero-body">I'm Ankit Mishra — a commercial leader and Forbes contributor with 13+ years building GTM systems and scaling AI adoption across African and global markets. I work with high-growth ventures and their investors on positioning, launch strategy, and the commercial infrastructure that turns ambition into traction.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Get in touch</a>
-          <a href="#experience" class="btn-ghost">See my work →</a>
-        </div>
-      </div>
-      <div class="photo-wrap">
-        <div class="photo-offset"></div>
-        <img src="headshot.jpg" alt="Ankit Mishra" class="photo-img">
-      </div>
+<section id="top" class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Product Marketing · Go-to-Market · AI · African Tech</p>
+    <h1>We build the commercial engine behind Africa's most ambitious tech companies.</h1>
+    <p class="hero-body">AM Consulting Group is a product marketing and go-to-market firm for fintech and cleantech ventures. We help founders and their investors position, launch, and scale — with AI-native commercial infrastructure built for African market dynamics, not adapted from Western templates.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Work with us</a>
+      <a href="#work" class="btn-ghost-light">See selected work →</a>
+    </div>
+  </div>
+  <div class="hero-stats-wrap">
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">50+</span><span class="stat-l">Forbes articles published</span></div>
+      <div class="stat"><span class="stat-n">14</span><span class="stat-l">Portfolio companies advised</span></div>
+      <div class="stat"><span class="stat-n">5</span><span class="stat-l">African markets entered</span></div>
+      <div class="stat"><span class="stat-n">200K+</span><span class="stat-l">Readers reached</span></div>
     </div>
   </div>
 </section>
 
-<!-- Stats -->
-<div class="stats-band">
+<!-- Trusted By -->
+<div class="trusted">
   <div class="wrap">
-    <div class="stats-row">
-      <div class="stat">
-        <span class="stat-n">50+</span>
-        <span class="stat-l">Forbes articles published</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">14</span>
-        <span class="stat-l">Portfolio companies advised</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">5</span>
-        <span class="stat-l">African markets entered</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">200K+</span>
-        <span class="stat-l">Readers reached</span>
+    <div class="trusted-row">
+      <p class="trusted-label">Trusted across African tech, climate &amp; finance</p>
+      <div class="trusted-logos">
+        <span class="trusted-name">Holocene</span>
+        <span class="trusted-name">Pngme</span>
+        <span class="trusted-name">Cycle Capital</span>
+        <span class="trusted-name">ABSA</span>
+        <span class="trusted-name">Kuda</span>
+        <span class="trusted-name">Tomo Credit</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Services -->
-<section class="section" id="services">
+<section id="services" class="section section-white">
   <div class="wrap">
-    <div class="section-header fade">
+    <div class="section-hdr" data-fade>
       <div>
-        <p class="eyebrow">What I do</p>
-        <h2>Three ways to work together.</h2>
+        <p class="eyebrow">What we do</p>
+        <h2>Three ways we drive commercial growth.</h2>
       </div>
-      <p>I work with fintech and cleantech ventures at the intersection of product, marketing, and AI — from early positioning through to scaled commercial infrastructure.</p>
+      <p>We work with fintech and cleantech ventures at the intersection of product, marketing, and AI — from early positioning through to scaled commercial infrastructure.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card fade">
-        <svg class="svc-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <circle cx="17" cy="17" r="13"/>
-          <circle cx="17" cy="17" r="4.5"/>
-          <line x1="17" y1="4" x2="17" y2="12.5"/>
-          <line x1="17" y1="21.5" x2="17" y2="30"/>
-          <line x1="4" y1="17" x2="12.5" y2="17"/>
-          <line x1="21.5" y1="17" x2="30" y2="17"/>
+      <div class="svc-card" data-fade>
+        <svg class="svc-icon" width="36" height="36" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="17" cy="17" r="13"/><circle cx="17" cy="17" r="4.5"/>
+          <line x1="17" y1="4" x2="17" y2="12.5"/><line x1="17" y1="21.5" x2="17" y2="30"/>
+          <line x1="4" y1="17" x2="12.5" y2="17"/><line x1="21.5" y1="17" x2="30" y2="17"/>
         </svg>
         <h3>GTM Strategy &amp; Product Marketing</h3>
-        <p>From ICP definition to channel strategy to launch playbooks. I've led commercial expansion across 5 African markets at Pngme, built GTM frameworks for climate fintech and financial data companies, and developed market-entry playbooks across 14 Holocene portfolio companies. Built for African market dynamics — not adapted from Western templates.</p>
+        <p>We define your ICP, sharpen your positioning, and build the channel strategy and launch playbooks that win. From financial data platforms to climate fintech, we've led commercial expansion across 5 African markets and built market-entry frameworks across 14 portfolio companies — built for African market dynamics, not adapted from Western templates.</p>
       </div>
-      <div class="svc-card fade">
-        <svg class="svc-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <div class="svc-card" data-fade>
+        <svg class="svc-icon" width="36" height="36" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <rect x="12" y="12" width="10" height="10"/>
-          <line x1="17" y1="4" x2="17" y2="12"/>
-          <line x1="17" y1="22" x2="17" y2="30"/>
-          <line x1="4" y1="17" x2="12" y2="17"/>
-          <line x1="22" y1="17" x2="30" y2="17"/>
+          <line x1="17" y1="4" x2="17" y2="12"/><line x1="17" y1="22" x2="17" y2="30"/>
+          <line x1="4" y1="17" x2="12" y2="17"/><line x1="22" y1="17" x2="30" y2="17"/>
           <circle cx="17" cy="4" r="2.5" fill="currentColor" stroke="none"/>
           <circle cx="17" cy="30" r="2.5" fill="currentColor" stroke="none"/>
           <circle cx="4" cy="17" r="2.5" fill="currentColor" stroke="none"/>
           <circle cx="30" cy="17" r="2.5" fill="currentColor" stroke="none"/>
         </svg>
         <h3>AI-Native Commercial Infrastructure</h3>
-        <p>I build what I recommend. Across 14 Holocene portfolio companies, I've deployed Anthropic-powered lead intelligence platforms, ICP scoring systems, and agentic workflows that delivered 3x SQL conversion and 5x faster prospecting. The output is a system that runs — not a slide deck that doesn't.</p>
+        <p>We build what we recommend. Across 14 portfolio companies, we've deployed Anthropic-powered lead intelligence platforms, ICP scoring systems, and agentic workflows that delivered 3× SQL conversion and 5× faster prospecting. You get a system that runs — not a slide deck that doesn't.</p>
       </div>
-      <div class="svc-card fade">
-        <svg class="svc-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <div class="svc-card" data-fade>
+        <svg class="svc-icon" width="36" height="36" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M5 29 L5 15 L17 5 L29 15 L29 29"/>
           <rect x="12" y="20" width="10" height="9"/>
           <line x1="5" y1="29" x2="29" y2="29"/>
-          <line x1="17" y1="5" x2="17" y2="12"/>
         </svg>
         <h3>Thought Leadership &amp; Venture Building</h3>
-        <p>50+ Forbes articles reaching 200,000+ readers. Regular commentary on CBC, Financial Post, and Ticker News. I help founders build the media presence that positions them with investors, partners, and regulators — and I coach early-stage teams on AI-augmented venture creation as Entrepreneur-in-Residence at Ivey Business School.</p>
+        <p>We help founders build the media presence that positions them with investors, partners, and regulators — drawing on 50+ Forbes articles and regular commentary on CBC, Financial Post, and Ticker News. And we coach early-stage teams on AI-augmented venture creation, including as EIR at Ivey Business School.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Experience -->
-<section class="section section-alt" id="experience">
+<!-- Selected Work -->
+<section id="work" class="section section-teal">
   <div class="wrap">
-    <div class="fade">
-      <p class="eyebrow">Selected experience</p>
-      <h2 style="margin-bottom: 52px;">Where the work comes from.</h2>
-    </div>
-    <div class="exp-list">
-
-      <div class="exp-item fade">
-        <div>
-          <p class="exp-period">2026 — Present</p>
-          <p class="exp-org">Holocene<br>Leading African VC Fund</p>
-        </div>
-        <div>
-          <p class="exp-role">Commercial Portfolio Director &amp; AI Transformation Lead</p>
-          <p class="exp-body">Architected AI commercial infrastructure across a 14-company portfolio — including a white-label AI lead intelligence platform that drove 3x SQL conversion and 5x faster prospecting. Acting Chief AI Officer across the portfolio, partnering with C-suite leaders to integrate AI across GTM strategies and operations. Founded the Holocene AI Fluency Lab, a CEFR-inspired roadmap transitioning portfolio companies into AI-native operators powered by Supabase, Gumloop, and Claude.</p>
-          <div class="exp-tags">
-            <span class="exp-tag">AI Transformation</span>
-            <span class="exp-tag">Portfolio GTM</span>
-            <span class="exp-tag">Fractional CAIO</span>
-            <span class="exp-tag">14 companies</span>
-            <span class="exp-tag">3x SQL conversion</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item fade">
-        <div>
-          <p class="exp-period">2022 — Present</p>
-          <p class="exp-org">AM Consulting Group</p>
-        </div>
-        <div>
-          <p class="exp-role">Founder &amp; Principal Consultant</p>
-          <p class="exp-body">Fractional Chief AI Officer and growth advisor across climate, fintech, and logistics. Scaled Astreas to $500K first-year revenue; managed a C$25M 10-year P&amp;L for Cycle Capital's cleantech innovation hub; improved Sensitel's lead conversion by 35%; drove a 2x increase in Tomo Credit's email open rates. Built the AI enablement frameworks that became Holocene's portfolio-wide infrastructure IP.</p>
-          <div class="exp-tags">
-            <span class="exp-tag">Cycle Capital</span>
-            <span class="exp-tag">Astreas</span>
-            <span class="exp-tag">Sensitel</span>
-            <span class="exp-tag">Tomo Credit</span>
-            <span class="exp-tag">CleanAI Initiative</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item fade">
-        <div>
-          <p class="exp-period">2019 — 2021</p>
-          <p class="exp-org">Pngme<br>Financial Data Platform</p>
-        </div>
-        <div>
-          <p class="exp-role">Head of Growth, Founding Team</p>
-          <p class="exp-body">Led commercial expansion across 5 African markets, building data governance frameworks adopted by financial institutions including ABSA, DTB, Kuda, RenMoney, and Umba across Nigeria, Kenya, Ghana, Uganda, and Zambia. Developed a Data Privacy Guide strengthening compliance readiness and institutional capacity across three markets.</p>
-          <div class="exp-tags">
-            <span class="exp-tag">ABSA</span>
-            <span class="exp-tag">DTB</span>
-            <span class="exp-tag">Kuda</span>
-            <span class="exp-tag">RenMoney</span>
-            <span class="exp-tag">5 African Markets</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item fade">
-        <div>
-          <p class="exp-period">2021 — 2022</p>
-          <p class="exp-org">Alariss Global<br>Sales Talent Marketplace</p>
-        </div>
-        <div>
-          <p class="exp-role">Head of Growth, Founding Team</p>
-          <p class="exp-body">Scaled and led a 10-person global growth team, expanding the customer base across 11 countries. Developed market-entry playbooks and trained 20+ sales professionals on governance-compliant, cross-cultural operations — improving client onboarding efficiency by 30%. Secured 3 VC channel partnerships sourcing 35% more qualified leads.</p>
-          <div class="exp-tags">
-            <span class="exp-tag">11 countries</span>
-            <span class="exp-tag">Market Entry</span>
-            <span class="exp-tag">Revenue Operations</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Publications -->
-<section class="section" id="writing">
-  <div class="wrap">
-    <div class="section-header fade">
+    <div class="section-hdr section-hdr-tight" data-fade>
       <div>
-        <p class="eyebrow">Writing &amp; Media</p>
+        <p class="eyebrow">Selected work</p>
+        <h2>Outcomes, not job titles.</h2>
+      </div>
+      <p>A selection of engagements across venture portfolios, fintech platforms, and cleantech innovation — measured by the commercial results they produced.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card" data-fade>
+        <span class="work-client">Holocene · VC Portfolio</span>
+        <h3>AI commercial infrastructure across a 14-company portfolio.</h3>
+        <p>Architected a white-label AI lead intelligence platform and portfolio-wide GTM systems, acting as fractional Chief AI Officer alongside C-suite leaders. Founded the Holocene AI Fluency Lab to transition companies into AI-native operators.</p>
+        <div class="work-metrics">
+          <div><div class="metric-n">3×</div><div class="metric-l">SQL conversion</div></div>
+          <div><div class="metric-n">5×</div><div class="metric-l">faster prospecting</div></div>
+        </div>
+      </div>
+      <div class="work-card" data-fade>
+        <span class="work-client">Pngme · Financial Data</span>
+        <h3>Commercial expansion across five African markets.</h3>
+        <p>Led go-to-market and built data governance frameworks adopted by financial institutions across Nigeria, Kenya, Ghana, Uganda, and Zambia — strengthening compliance readiness and institutional capacity.</p>
+        <div class="work-metrics">
+          <div><div class="metric-n">5</div><div class="metric-l">markets entered</div></div>
+          <div><div class="metric-n metric-n-sm">ABSA · DTB · Kuda</div><div class="metric-l">institutions adopted</div></div>
+        </div>
+      </div>
+      <div class="work-card" data-fade>
+        <span class="work-client">Cycle Capital · Cleantech</span>
+        <h3>Go-to-market for a cleantech innovation hub.</h3>
+        <p>Managed a long-horizon P&amp;L and commercial strategy for a cleantech innovation hub, plus fractional growth leadership across Astreas, Sensitel, and Tomo Credit spanning climate, fintech, and logistics.</p>
+        <div class="work-metrics">
+          <div><div class="metric-n">C$25M</div><div class="metric-l">10-year P&amp;L managed</div></div>
+          <div><div class="metric-n">$500K</div><div class="metric-l">first-year revenue (Astreas)</div></div>
+        </div>
+      </div>
+      <div class="work-card" data-fade>
+        <span class="work-client">Alariss Global · Marketplace</span>
+        <h3>Global growth team across eleven countries.</h3>
+        <p>Scaled and led a 10-person growth team, built market-entry playbooks, and trained 20+ sales professionals on governance-compliant, cross-cultural operations — plus three VC channel partnerships.</p>
+        <div class="work-metrics">
+          <div><div class="metric-n">+30%</div><div class="metric-l">onboarding efficiency</div></div>
+          <div><div class="metric-n">+35%</div><div class="metric-l">qualified leads</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Founder -->
+<section id="founder" class="section section-ink">
+  <div class="wrap">
+    <div class="founder-grid">
+      <div class="founder-photo" data-fade>
+        <div class="founder-frame"></div>
+        <img src="headshot.jpg" alt="Ankit Mishra" class="founder-img">
+      </div>
+      <div data-fade>
+        <p class="founder-eyebrow">Founder</p>
+        <h2 class="founder-name">Ankit Mishra</h2>
+        <p class="founder-title">Founder &amp; Principal · Forbes Contributor</p>
+        <p class="founder-bio">Ankit founded AM Consulting Group after 13+ years building go-to-market systems across African and global markets. A Forbes contributor with 50+ published articles, he was Head of Growth on the founding teams at Pngme and Alariss Global, and has served as fractional Chief AI Officer and growth advisor to climate, fintech, and logistics ventures.</p>
+        <p class="founder-bio">Today he leads commercial and AI transformation across Holocene's 14-company portfolio, partnering directly with C-suite leaders. His commentary appears on CBC, Financial Post, and Ticker News, and he coaches early-stage founders as Entrepreneur-in-Residence at Ivey Business School.</p>
+        <div class="founder-tags">
+          <span class="founder-tag">Forbes</span>
+          <span class="founder-tag">Holocene VC</span>
+          <span class="founder-tag">Schwartz Reisman Institute · U of T</span>
+          <span class="founder-tag">Ivey Business School · EIR</span>
+          <span class="founder-tag">Sciences Po Paris</span>
+          <span class="founder-tag">OECD · IEA · NATO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insights -->
+<section id="insights" class="section section-white">
+  <div class="wrap">
+    <div class="section-hdr" data-fade>
+      <div>
+        <p class="eyebrow">Insights &amp; Media</p>
         <h2>50+ articles. 200,000+ readers.</h2>
       </div>
       <p>Forbes contributor covering AI, cleantech, and emerging market energy systems since 2020. Regular media commentary on CBC Radio, Financial Post, and Ticker News. Previously TechCrunch and NextBillion.</p>
     </div>
-    <div class="pub-grid fade">
+    <div class="pub-grid" data-fade>
       <a class="pub-card" href="https://www.forbes.com/sites/ankitmishra/2025/08/06/decarbonizing-the-industrial-sector-can-ai-catalyze-global-progress/" target="_blank" rel="noopener noreferrer">
         <span class="pub-outlet">Forbes · Aug 2025</span>
         <span class="pub-title">Decarbonizing The Industrial Sector: Can AI Catalyze Global Progress?</span>
@@ -657,29 +422,14 @@
   </div>
 </section>
 
-<!-- Credentials -->
-<div class="creds-band">
-  <div class="wrap">
-    <p class="creds-label">Credentials &amp; Affiliations</p>
-    <div class="creds-row">
-      <span class="cred-item">Forbes</span>
-      <span class="cred-item">Holocene VC</span>
-      <span class="cred-item">Schwartz Reisman Institute · U of Toronto</span>
-      <span class="cred-item">Ivey Business School · EIR</span>
-      <span class="cred-item">Sciences Po Paris</span>
-      <span class="cred-item">OECD · IEA · NATO</span>
-    </div>
-  </div>
-</div>
-
 <!-- Contact -->
-<section class="section" id="contact">
+<section id="contact" class="section section-bg">
   <div class="wrap">
     <div class="contact-grid">
-      <div class="contact-left fade">
-        <p class="eyebrow">Get in touch</p>
-        <h2>Let's talk about your company.</h2>
-        <p>Whether you're building, scaling, or trying to find your market in Africa — I'd like to hear about it. I work with a small number of clients at a time so I can be genuinely useful.</p>
+      <div data-fade>
+        <p class="contact-eyebrow">Work with us</p>
+        <h2 class="contact-h2">Tell us about your company.</h2>
+        <p class="contact-body">Whether you're building, scaling, or entering African markets — we'd like to hear about it. We take on a small number of engagements at a time so the work stays senior and genuinely useful.</p>
         <div class="contact-detail">
           <span class="cd-label">Email</span>
           <span class="cd-val">ankit@ankitmishra.ca</span>
@@ -692,12 +442,8 @@
           <span class="cd-label">LinkedIn</span>
           <a href="https://www.linkedin.com/in/ankitmishraca/" target="_blank" rel="noopener" class="cd-link">linkedin.com/in/ankitmishraca</a>
         </div>
-        <div class="contact-detail">
-          <span class="cd-label">Website</span>
-          <a href="https://ankitmishra.ca" target="_blank" rel="noopener" class="cd-link">ankitmishra.ca</a>
-        </div>
       </div>
-      <form class="fade" onsubmit="handleSubmit(event)">
+      <form data-fade onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div class="form-field">
             <label for="fname">First name</label>
@@ -717,7 +463,7 @@
           <input type="text" id="company" autocomplete="organization">
         </div>
         <div class="form-field">
-          <label for="interest">I'm interested in</label>
+          <label for="interest">We're interested in</label>
           <select id="interest">
             <option value="">Select an option</option>
             <option>GTM Strategy &amp; Product Marketing</option>
@@ -728,10 +474,10 @@
           </select>
         </div>
         <div class="form-field">
-          <label for="message">Tell me about your company</label>
+          <label for="message">Tell us about your company</label>
           <textarea id="message" rows="4" placeholder="A few sentences is enough."></textarea>
         </div>
-        <button type="submit" class="btn-submit">Send message →</button>
+        <button type="submit" class="btn-submit" id="submit-btn">Send message →</button>
       </form>
     </div>
   </div>
@@ -741,32 +487,38 @@
 <footer>
   <div class="wrap">
     <div class="footer-row">
-      <span class="footer-copy">© 2026 Ankit Mishra. Toronto, Canada.</span>
+      <div>
+        <div class="footer-brand">AM Consulting Group</div>
+        <div class="footer-copy">© 2026 AM Consulting Group · Toronto, Canada</div>
+      </div>
       <ul class="footer-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#writing">Writing</a></li>
-        <li><a href="https://ankitmishra.ca" target="_blank" rel="noopener">Website</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="https://ankitmishra.ca" target="_blank" rel="noopener">ankitmishra.ca</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
 <script>
-  // Scroll fade-in
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }
+      if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); }
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade').forEach(function(el) { observer.observe(el); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('[data-fade]').forEach(function(el) { observer.observe(el); });
 
-  // Form submit
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    nav.style.boxShadow = window.scrollY > 56 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+  }, { passive: true });
+
   function handleSubmit(e) {
     e.preventDefault();
-    var btn = e.target.querySelector('.btn-submit');
-    btn.textContent = "Sent. I'll be in touch.";
-    btn.style.background = '#246B47';
+    var btn = document.getElementById('submit-btn');
+    btn.textContent = "Sent — we'll be in touch.";
+    btn.style.background = '#20596C';
     btn.disabled = true;
   }
 </script>
