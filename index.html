@@ -10,40 +10,40 @@
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     body {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      background: #F4F7F7;
-      color: #10242B;
+      font-family: 'Poppins', system-ui, sans-serif;
+      background: #FFFFFF;
+      color: #1D1D1F;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     input, textarea, select {
       outline: none; border-radius: 0;
       -webkit-appearance: none; appearance: none;
-      font-family: 'DM Sans', system-ui, sans-serif;
+      font-family: 'Poppins', system-ui, sans-serif;
     }
     select {
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2351666E' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236E6E73' stroke-width='1.5'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right 14px center; cursor: pointer;
     }
 
     :root {
-      --ink:     #002F3D;
-      --teal:    #2A6F85;
-      --teal-d:  #20596C;
-      --bg:      #F4F7F7;
-      --bg-teal: #EEF4F5;
-      --text:    #10242B;
-      --muted:   #51666E;
-      --border:  #D3E0E2;
-      --border2: #E0EDF0;
-      --light:   #6FB8CC;
+      --ink:     #1D1D1F;
+      --teal:    #2A7A6E;
+      --teal-d:  #226158;
+      --bg:      #FFFFFF;
+      --bg-teal: #F4FAF8;
+      --text:    #1D1D1F;
+      --muted:   #6E6E73;
+      --border:  #E5E7EB;
+      --border2: #F0F2F5;
+      --light:   #7DBFB6;
     }
 
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
@@ -58,31 +58,31 @@
     /* Nav */
     .nav {
       position: fixed; top: 3px; left: 0; right: 0; z-index: 100;
-      background: rgba(244,247,247,0.92);
+      background: rgba(255,255,255,0.92);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       padding: 16px 0; transition: box-shadow 0.3s ease;
     }
     .nav-row { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 13px; }
-    .nav-logo-mark { display: flex; align-items: center; justify-content: center; background: var(--ink); padding: 8px 10px; border-radius: 3px; }
+    .nav-logo-mark { display: flex; align-items: center; justify-content: center; background: var(--ink); padding: 8px 10px; border-radius: 6px; }
     .nav-logo-mark img { height: 22px; width: auto; }
     .nav-brand { font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
     .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
     .nav-links a { font-size: 15px; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
-    .nav-cta { font-size: 14px !important; font-weight: 500; background: var(--teal); color: white !important; padding: 10px 24px; letter-spacing: 0.01em; transition: background 0.2s; }
+    .nav-cta { font-size: 14px !important; font-weight: 500; background: var(--teal); color: white !important; padding: 10px 24px; border-radius: 8px; letter-spacing: 0.01em; transition: background 0.2s; }
     .nav-cta:hover { background: var(--teal-d) !important; }
 
     /* Hero */
     .hero { background: var(--ink); padding-top: 88px; position: relative; overflow: hidden; }
-    .hero-glow { position: absolute; top: 0; right: -200px; width: 680px; height: 680px; background: radial-gradient(circle, rgba(42,111,133,0.34) 0%, transparent 68%); pointer-events: none; }
+    .hero-glow { position: absolute; top: 0; right: -200px; width: 680px; height: 680px; background: radial-gradient(circle, rgba(42,122,110,0.28) 0%, transparent 68%); pointer-events: none; }
     .hero-inner { max-width: 1160px; margin: 0 auto; padding: 116px 48px 0; position: relative; }
     .hero-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light); margin-bottom: 30px; }
-    .hero h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(46px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.022em; color: white; margin-bottom: 34px; max-width: 18ch; text-wrap: balance; }
-    .hero-body { font-size: 21px; color: rgba(255,255,255,0.68); line-height: 1.66; max-width: 60ch; margin-bottom: 46px; font-weight: 300; }
+    .hero h1 { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.08; letter-spacing: -0.03em; color: white; margin-bottom: 34px; max-width: 20ch; text-wrap: balance; }
+    .hero-body { font-size: 19px; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 60ch; margin-bottom: 46px; font-weight: 300; }
     .hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--teal); color: white; padding: 16px 36px; font-size: 15px; font-weight: 500; display: inline-block; letter-spacing: 0.01em; transition: background 0.2s; }
+    .btn-primary { background: var(--teal); color: white; padding: 15px 34px; font-size: 15px; font-weight: 500; display: inline-block; letter-spacing: 0.01em; border-radius: 8px; transition: background 0.2s; }
     .btn-primary:hover { background: var(--teal-d); }
     .btn-ghost-light { font-size: 15px; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; }
     .btn-ghost-light:hover { color: white; border-color: rgba(255,255,255,0.6); }
@@ -90,73 +90,80 @@
     .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 92px; padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.12); }
     .stat { display: flex; flex-direction: column; gap: 10px; }
     .stat-n { font-family: 'DM Mono', 'Courier New', monospace; font-size: 48px; color: white; letter-spacing: -0.03em; line-height: 1; }
-    .stat-l { font-size: 15px; color: rgba(255,255,255,0.56); line-height: 1.45; }
+    .stat-l { font-size: 14px; color: rgba(255,255,255,0.52); line-height: 1.45; font-weight: 400; }
 
     /* Trusted By */
     .trusted { background: var(--bg); border-bottom: 1px solid var(--border); padding: 42px 0; }
     .trusted-row { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; justify-content: space-between; }
     .trusted-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
     .trusted-logos { display: flex; align-items: center; gap: 38px; flex-wrap: wrap; }
-    .trusted-name { font-size: 17px; font-weight: 600; color: var(--text); opacity: 0.55; }
+    .trusted-name { font-size: 16px; font-weight: 600; color: var(--text); opacity: 0.45; }
     .trusted-logo-item { display: flex; align-items: center; }
-    .trusted-logo-img { height: 28px; width: auto; max-width: 110px; object-fit: contain; filter: grayscale(1); opacity: 0.5; transition: filter 0.2s, opacity 0.2s; }
+    .trusted-logo-img { height: 28px; width: auto; max-width: 110px; object-fit: contain; filter: grayscale(1); opacity: 0.45; transition: filter 0.2s, opacity 0.2s; }
     .trusted-logo-item:hover .trusted-logo-img { filter: none; opacity: 0.9; }
     .trusted-logo-item:hover .trusted-name { opacity: 0.9; }
 
     /* Section */
     .section { padding: 112px 0; }
     .section-white { background: white; }
-    .section-teal { background: var(--bg-teal); }
+    .section-teal { background: #FFFFFF; }
     .section-ink { background: var(--ink); }
-    .section-bg { background: var(--bg); border-top: 1px solid var(--border); }
+    .section-bg { background: #FAFBFC; border-top: 1px solid var(--border); }
     .eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; }
-    h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(32px, 3.9vw, 50px); line-height: 1.12; color: var(--text); letter-spacing: -0.015em; text-wrap: balance; }
+    h2 { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 600; font-size: clamp(28px, 3.5vw, 46px); line-height: 1.15; color: var(--text); letter-spacing: -0.02em; text-wrap: balance; }
     .section-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: end; margin-bottom: 60px; }
-    .section-hdr p { font-size: 18px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+    .section-hdr p { font-size: 17px; color: var(--muted); line-height: 1.72; font-weight: 300; }
     .section-hdr-tight { margin-bottom: 56px; }
 
     /* Services */
-    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-    .svc-card { background: white; padding: 44px 38px 54px; display: flex; flex-direction: column; gap: 20px; transition: background 0.25s; }
-    .svc-card:hover { background: var(--bg-teal); }
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .svc-card { background: white; padding: 40px 36px 48px; display: flex; flex-direction: column; gap: 18px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.05); transition: box-shadow 0.25s, border-color 0.25s; }
+    .svc-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #D1D5DB; }
     .svc-icon { color: var(--teal); flex-shrink: 0; }
-    .svc-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 26px; color: var(--text); line-height: 1.24; }
-    .svc-card p { font-size: 17px; color: var(--muted); line-height: 1.68; font-weight: 300; }
+    .svc-card h3 { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 600; font-size: 20px; color: var(--text); line-height: 1.3; }
+    .svc-card p { font-size: 16px; color: var(--muted); line-height: 1.7; font-weight: 300; }
 
     /* Work */
-    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .work-card { background: white; padding: 42px 42px 46px; display: flex; flex-direction: column; gap: 18px; }
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .work-card { background: white; padding: 0; display: flex; flex-direction: column; border-radius: 14px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; transition: box-shadow 0.25s, transform 0.25s; }
+    .work-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .work-card-head { background: var(--bg-teal); padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(42,122,110,0.1); }
+    .work-logo { height: 28px; width: auto; max-width: 90px; object-fit: contain; }
     .work-client { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); }
-    .work-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 28px; color: var(--text); line-height: 1.2; }
-    .work-card p { font-size: 16px; color: var(--muted); line-height: 1.68; font-weight: 300; flex: 1; }
-    .work-metrics { display: flex; gap: 36px; padding-top: 20px; border-top: 1px solid var(--border2); }
-    .metric-n { font-family: 'DM Mono', 'Courier New', monospace; font-size: 30px; color: var(--teal); line-height: 1; }
-    .metric-n-sm { font-size: 18px; letter-spacing: -0.01em; }
-    .metric-l { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .work-card-body { padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .work-card h3 { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 600; font-size: 20px; color: var(--text); line-height: 1.3; }
+    .work-card p { font-size: 15px; color: var(--muted); line-height: 1.72; font-weight: 300; flex: 1; }
+    .work-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); background: #F8FAFA; border-top: 1px solid var(--border); }
+    .work-metrics > div { padding: 20px 24px; border-right: 1px solid var(--border); }
+    .work-metrics > div:last-child { border-right: none; }
+    .metric-n { font-family: 'DM Mono', 'Courier New', monospace; font-size: 32px; color: var(--teal); line-height: 1; }
+    .metric-n-sm { font-size: 17px; letter-spacing: -0.01em; }
+    .metric-l { font-size: 12px; color: var(--muted); margin-top: 6px; }
 
     /* Founder */
     .founder-grid { display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: center; }
     .founder-photo { position: relative; }
-    .founder-frame { position: absolute; inset: 16px 16px -16px -16px; border: 1px solid rgba(111,184,204,0.5); z-index: 0; }
-    .founder-img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top center; }
+    .founder-frame { position: absolute; inset: 16px 16px -16px -16px; border: 1px solid rgba(125,191,182,0.4); z-index: 0; border-radius: 14px; }
+    .founder-img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top center; border-radius: 12px; }
     .founder-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 18px; }
-    .founder-name { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(36px, 4.1vw, 56px); line-height: 1.06; color: white; letter-spacing: -0.018em; margin-bottom: 10px; }
-    .founder-title { font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: 0.07em; color: rgba(255,255,255,0.55); margin-bottom: 30px; }
-    .founder-bio { font-size: 18px; color: rgba(255,255,255,0.74); line-height: 1.76; font-weight: 300; margin-bottom: 22px; }
+    .founder-name { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.1; color: white; letter-spacing: -0.025em; margin-bottom: 10px; }
+    .founder-title { font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; letter-spacing: 0.07em; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+    .founder-bio { font-size: 17px; color: rgba(255,255,255,0.72); line-height: 1.78; font-weight: 300; margin-bottom: 20px; }
     .founder-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    .founder-tag { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 500; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.18); }
+    .founder-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.72); font-weight: 400; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.16); border-radius: 6px; }
+    .founder-tag img { height: 16px; width: auto; max-width: 22px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.7; flex-shrink: 0; }
 
     /* Insights */
-    .pub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
-    .pub-card { background: white; padding: 36px 38px 40px; display: flex; flex-direction: column; gap: 13px; transition: background 0.22s; }
-    .pub-card:hover { background: var(--bg-teal); }
-    .pub-card-featured { grid-column: 1 / -1; border-left: 3px solid var(--teal); padding-left: 35px; }
-    .pub-card-featured .pub-title { font-size: 20px; }
+    .pub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .pub-card { background: white; padding: 32px 36px 38px; display: flex; flex-direction: column; gap: 12px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: box-shadow 0.22s, border-color 0.22s; }
+    .pub-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #D1D5DB; }
+    .pub-card-featured { grid-column: 1 / -1; border-left: 3px solid var(--teal); padding-left: 33px; }
+    .pub-card-featured .pub-title { font-size: 19px; }
     .pub-outlet { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); }
-    .pub-title { font-size: 18px; color: var(--text); font-weight: 500; line-height: 1.4; flex: 1; }
+    .pub-title { font-size: 17px; color: var(--text); font-weight: 500; line-height: 1.42; flex: 1; }
     .pub-arrow { font-size: 15px; color: var(--teal); }
     /* Work press link */
-    .work-press { display: flex; align-items: center; gap: 8px; }
+    .work-press { display: flex; align-items: center; gap: 8px; padding-top: 4px; }
     .work-press-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
     .work-press-link { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; color: var(--teal); letter-spacing: 0.04em; transition: opacity 0.2s; }
     .work-press-link:hover { opacity: 0.7; }
@@ -164,31 +171,31 @@
     /* Contact */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
     .contact-eyebrow { font-family: 'DM Mono', 'Courier New', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; }
-    .contact-h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(32px, 3.9vw, 50px); line-height: 1.12; color: var(--text); letter-spacing: -0.015em; margin-bottom: 24px; }
-    .contact-body { font-size: 18px; color: var(--muted); max-width: 44ch; margin-bottom: 48px; font-weight: 300; line-height: 1.7; }
+    .contact-h2 { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 600; font-size: clamp(28px, 3.5vw, 46px); line-height: 1.15; color: var(--text); letter-spacing: -0.02em; margin-bottom: 24px; }
+    .contact-body { font-size: 17px; color: var(--muted); max-width: 44ch; margin-bottom: 48px; font-weight: 300; line-height: 1.72; }
     .contact-detail { margin-bottom: 24px; }
     .cd-label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: block; margin-bottom: 6px; }
-    .cd-val { font-size: 17px; color: var(--text); }
-    .cd-link { font-size: 17px; color: var(--teal); transition: opacity 0.2s; }
+    .cd-val { font-size: 16px; color: var(--text); }
+    .cd-link { font-size: 16px; color: var(--teal); transition: opacity 0.2s; }
     .cd-link:hover { opacity: 0.7; }
     form { display: flex; flex-direction: column; gap: 18px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .form-field { display: flex; flex-direction: column; gap: 8px; }
     label { font-family: 'DM Mono', 'Courier New', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-    input, textarea, select { background: white; border: 1px solid var(--border); color: var(--text); padding: 13px 15px; font-size: 16px; width: 100%; transition: border-color 0.2s; }
+    input, textarea, select { background: white; border: 1px solid var(--border); color: var(--text); padding: 13px 15px; font-size: 15px; width: 100%; border-radius: 8px; transition: border-color 0.2s; }
     select { padding-right: 36px; }
     input:focus, textarea:focus, select:focus { border-color: var(--teal); }
     textarea { resize: vertical; min-height: 108px; }
-    .btn-submit { background: var(--teal); color: white; padding: 15px 34px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.01em; transition: background 0.2s; font-family: 'DM Sans', system-ui, sans-serif; }
+    .btn-submit { background: var(--teal); color: white; padding: 15px 34px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.01em; border-radius: 8px; transition: background 0.2s; font-family: 'Poppins', system-ui, sans-serif; }
     .btn-submit:hover { background: var(--teal-d); }
 
     /* Footer */
     footer { background: var(--ink); padding: 46px 0; }
     .footer-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-brand { font-size: 16px; font-weight: 600; color: white; letter-spacing: 0.01em; }
-    .footer-copy { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 7px; }
+    .footer-copy { font-size: 14px; color: rgba(255,255,255,0.38); margin-top: 7px; }
     .footer-links { display: flex; gap: 28px; list-style: none; }
-    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.42); transition: color 0.2s; }
     .footer-links a:hover { color: white; }
 
     /* Responsive */
@@ -229,6 +236,7 @@
         <li><a href="#work">Work</a></li>
         <li><a href="#founder">Founder</a></li>
         <li><a href="#insights">Insights</a></li>
+        <li><a href="1pager.html" target="_blank" rel="noopener">1-Pager</a></li>
         <li><a href="#contact" class="nav-cta">Work with us</a></li>
       </ul>
     </div>
@@ -240,7 +248,7 @@
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <p class="hero-eyebrow">Product Marketing · Go-to-Market · AI · African Tech</p>
-    <h1>We build the commercial engine behind Africa's most ambitious tech companies.</h1>
+    <h1>We build Africa's commercial engine.</h1>
     <p class="hero-body">AM Consulting Group is a product marketing and go-to-market firm for fintech and cleantech ventures. We help founders and their investors position, launch, and scale — with AI-native commercial infrastructure built for African market dynamics, not adapted from Western templates.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Work with us</a>
@@ -264,28 +272,22 @@
       <p class="trusted-label">Trusted across African tech, climate &amp; finance</p>
       <div class="trusted-logos">
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/holocene.africa" alt="Holocene" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Holocene</span>
+          <img src="logos/holocene.png" alt="Holocene" class="trusted-logo-img">
         </div>
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/pngme.com" alt="Pngme" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Pngme</span>
+          <img src="logos/pngme.png" alt="Pngme" class="trusted-logo-img">
         </div>
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/premise.com" alt="Premise Data" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Premise Data</span>
+          <img src="logos/premise.svg" alt="Premise Data" class="trusted-logo-img">
         </div>
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/cyclecapital.com" alt="Cycle Capital" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Cycle Capital</span>
+          <img src="logos/cyclecapital.png" alt="Cycle Capital" class="trusted-logo-img">
         </div>
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/tomocredit.com" alt="Tomo Credit" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Tomo Credit</span>
+          <img src="logos/tomocredit.png" alt="Tomo Credit" class="trusted-logo-img">
         </div>
         <div class="trusted-logo-item">
-          <img src="https://logo.clearbit.com/forbes.com" alt="Forbes" class="trusted-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-          <span class="trusted-name" style="display:none">Forbes</span>
+          <img src="logos/forbes.svg" alt="Forbes" class="trusted-logo-img">
         </div>
       </div>
     </div>
@@ -350,21 +352,31 @@
     </div>
     <div class="work-grid">
       <div class="work-card" data-fade>
-        <span class="work-client">Holocene · VC Portfolio</span>
-        <h3>AI commercial infrastructure across a 14-company portfolio.</h3>
-        <p>Architected a white-label AI lead intelligence platform and portfolio-wide GTM systems, acting as fractional Chief AI Officer alongside C-suite leaders. Founded the Holocene AI Fluency Lab to transition companies into AI-native operators.</p>
+        <div class="work-card-head">
+          <span class="work-client">Holocene · VC Portfolio</span>
+          <img class="work-logo" src="logos/holocene.png" alt="Holocene" onerror="this.style.display='none'">
+        </div>
+        <div class="work-card-body">
+          <h3>AI commercial infrastructure across a 14-company portfolio.</h3>
+          <p>Architected a white-label AI lead intelligence platform and portfolio-wide GTM systems, acting as fractional Chief AI Officer alongside C-suite leaders. Founded the Holocene AI Fluency Lab to transition companies into AI-native operators.</p>
+        </div>
         <div class="work-metrics">
           <div><div class="metric-n">3×</div><div class="metric-l">SQL conversion</div></div>
           <div><div class="metric-n">5×</div><div class="metric-l">faster prospecting</div></div>
         </div>
       </div>
       <div class="work-card" data-fade>
-        <span class="work-client">Pngme · Financial Data</span>
-        <h3>Commercial expansion across five African markets.</h3>
-        <p>Led go-to-market and built data governance frameworks adopted by financial institutions across Nigeria, Kenya, Ghana, Uganda, and Zambia — strengthening compliance readiness and institutional capacity.</p>
-        <div class="work-press">
-          <span class="work-press-label">Press</span>
-          <a class="work-press-link" href="https://techcrunch.com/2021/08/17/african-fintech-pngme-raises-15m-for-its-financial-data-infrastructure-platform/" target="_blank" rel="noopener noreferrer">TechCrunch — Pngme raises $15M Series A →</a>
+        <div class="work-card-head">
+          <span class="work-client">Pngme · Financial Data</span>
+          <img class="work-logo" src="logos/pngme.png" alt="Pngme" onerror="this.style.display='none'">
+        </div>
+        <div class="work-card-body">
+          <h3>Commercial expansion across five African markets.</h3>
+          <p>Led go-to-market and built data governance frameworks adopted by financial institutions across Nigeria, Kenya, Ghana, Uganda, and Zambia — strengthening compliance readiness and institutional capacity.</p>
+          <div class="work-press">
+            <span class="work-press-label">Press</span>
+            <a class="work-press-link" href="https://techcrunch.com/2021/08/17/african-fintech-pngme-raises-15m-for-its-financial-data-infrastructure-platform/" target="_blank" rel="noopener noreferrer">TechCrunch — Pngme raises $15M Series A →</a>
+          </div>
         </div>
         <div class="work-metrics">
           <div><div class="metric-n">5</div><div class="metric-l">markets entered</div></div>
@@ -372,18 +384,28 @@
         </div>
       </div>
       <div class="work-card" data-fade>
-        <span class="work-client">Cycle Capital · Cleantech</span>
-        <h3>Go-to-market for a cleantech innovation hub.</h3>
-        <p>Managed a long-horizon P&amp;L and commercial strategy for a cleantech innovation hub, plus fractional growth leadership across Astreas, Sensitel, and Tomo Credit spanning climate, fintech, and logistics.</p>
+        <div class="work-card-head">
+          <span class="work-client">Cycle Capital · Cleantech</span>
+          <img class="work-logo" src="logos/cyclecapital.png" alt="Cycle Capital" onerror="this.style.display='none'">
+        </div>
+        <div class="work-card-body">
+          <h3>Go-to-market for a cleantech innovation hub.</h3>
+          <p>Managed a long-horizon P&amp;L and commercial strategy for a cleantech innovation hub, plus fractional growth leadership across Astreas, Sensitel, and Tomo Credit spanning climate, fintech, and logistics.</p>
+        </div>
         <div class="work-metrics">
           <div><div class="metric-n">C$25M</div><div class="metric-l">10-year P&amp;L managed</div></div>
           <div><div class="metric-n">$500K</div><div class="metric-l">first-year revenue (Astreas)</div></div>
         </div>
       </div>
       <div class="work-card" data-fade>
-        <span class="work-client">Alariss Global · Marketplace</span>
-        <h3>Global growth team across eleven countries.</h3>
-        <p>Scaled and led a 10-person growth team, built market-entry playbooks, and trained 20+ sales professionals on governance-compliant, cross-cultural operations — plus three VC channel partnerships.</p>
+        <div class="work-card-head">
+          <span class="work-client">Alariss Global · Marketplace</span>
+          <img class="work-logo" src="https://logo.clearbit.com/alariss.com" alt="Alariss Global" onerror="this.style.display='none'">
+        </div>
+        <div class="work-card-body">
+          <h3>Global growth team across eleven countries.</h3>
+          <p>Scaled and led a 10-person growth team, built market-entry playbooks, and trained 20+ sales professionals on governance-compliant, cross-cultural operations — plus three VC channel partnerships.</p>
+        </div>
         <div class="work-metrics">
           <div><div class="metric-n">+30%</div><div class="metric-l">onboarding efficiency</div></div>
           <div><div class="metric-n">+35%</div><div class="metric-l">qualified leads</div></div>
@@ -405,16 +427,16 @@
         <p class="founder-eyebrow">Founder</p>
         <h2 class="founder-name">Ankit Mishra</h2>
         <p class="founder-title">Founder &amp; Principal · Forbes Contributor</p>
-        <p class="founder-bio">Ankit founded AM Consulting Group after 13+ years building go-to-market systems across African and global markets. A Forbes contributor with 50+ published articles, he held Head of Growth roles on the founding teams at Pngme and Alariss Global — including during Pngme's $15M Series A. Earlier, he led socioeconomic data operations across 140+ countries at Premise Data, and served as Economist at the OECD &amp; IEA in Paris.</p>
-        <p class="founder-bio">Today he leads commercial and AI transformation across Holocene's 14-company portfolio as fractional Chief AI Officer, partnering directly with C-suite leaders. He is a Member of the Schwartz Reisman Institute AI &amp; Trust Working Group at U of Toronto — where he built the AI Trajectory Index, scoring 186 economies on AI readiness. He coaches founders as EIR at Ivey Business School and Mentor at McGill's TechAccel accelerator.</p>
+        <p class="founder-bio">Ankit Mishra is a commercial strategist and AI transformation leader specialising in African fintech and cleantech. He is Founder and Principal of AM Consulting Group and a Forbes contributor with 50+ published articles reaching 200,000+ readers.</p>
+        <p class="founder-bio">Ankit is a Member of the AI &amp; Trust Working Group at the Schwartz Reisman Institute, University of Toronto — where he built the AI Trajectory Index, scoring 186 economies on AI readiness alongside researchers from Harvard, BCG, and Meta. He is Entrepreneur-in-Residence at Ivey Business School and Mentor at McGill's TechAccel accelerator. Previously, he led commercial expansion at Pngme across five African markets during its $15M Series A, and served as Economist at the OECD and IEA in Paris.</p>
         <div class="founder-tags">
-          <span class="founder-tag">Forbes</span>
-          <span class="founder-tag">Holocene VC</span>
-          <span class="founder-tag">Schwartz Reisman Institute · U of T</span>
-          <span class="founder-tag">Ivey Business School · EIR</span>
-          <span class="founder-tag">McGill · TechAccel</span>
-          <span class="founder-tag">Sciences Po Paris</span>
-          <span class="founder-tag">OECD · IEA · NATO</span>
+          <span class="founder-tag"><img src="logos/forbes.svg" alt="" onerror="this.style.display='none'">Forbes</span>
+          <span class="founder-tag"><img src="logos/holocene.png" alt="" onerror="this.style.display='none'">Holocene VC</span>
+          <span class="founder-tag"><img src="https://logo.clearbit.com/utoronto.ca" alt="" onerror="this.style.display='none'">Schwartz Reisman Institute · U of T</span>
+          <span class="founder-tag"><img src="https://logo.clearbit.com/ivey.uwo.ca" alt="" onerror="this.style.display='none'">Ivey Business School · EIR</span>
+          <span class="founder-tag"><img src="https://logo.clearbit.com/mcgill.ca" alt="" onerror="this.style.display='none'">McGill · TechAccel</span>
+          <span class="founder-tag"><img src="https://logo.clearbit.com/sciencespo.fr" alt="" onerror="this.style.display='none'">Sciences Po Paris</span>
+          <span class="founder-tag"><img src="https://logo.clearbit.com/oecd.org" alt="" onerror="this.style.display='none'">OECD · IEA · NATO</span>
         </div>
       </div>
     </div>
@@ -429,14 +451,9 @@
         <p class="eyebrow">Insights &amp; Media</p>
         <h2>50+ articles. 200,000+ readers.</h2>
       </div>
-      <p>Forbes contributor covering AI, cleantech, and emerging market energy systems since 2020. Regular media commentary on CBC Radio, Financial Post, and Ticker News. Previously TechCrunch and NextBillion.</p>
+      <p>Forbes contributor covering AI, cleantech, and emerging market energy systems since 2020. Regular media commentary on CBC Radio, Financial Post, and Ticker News.</p>
     </div>
     <div class="pub-grid" data-fade>
-      <a class="pub-card pub-card-featured" href="https://techcrunch.com/2021/08/17/african-fintech-pngme-raises-15m-for-its-financial-data-infrastructure-platform/" target="_blank" rel="noopener noreferrer">
-        <span class="pub-outlet">TechCrunch · Aug 2021</span>
-        <span class="pub-title">African Fintech Pngme Raises $15M For Its Financial Data Infrastructure Platform</span>
-        <span class="pub-arrow">→</span>
-      </a>
       <a class="pub-card" href="https://www.forbes.com/sites/ankitmishra/2025/08/06/decarbonizing-the-industrial-sector-can-ai-catalyze-global-progress/" target="_blank" rel="noopener noreferrer">
         <span class="pub-outlet">Forbes · Aug 2025</span>
         <span class="pub-title">Decarbonizing The Industrial Sector: Can AI Catalyze Global Progress?</span>
@@ -550,14 +567,14 @@
 
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function() {
-    nav.style.boxShadow = window.scrollY > 56 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+    nav.style.boxShadow = window.scrollY > 56 ? '0 2px 20px rgba(0,0,0,0.07)' : 'none';
   }, { passive: true });
 
   function handleSubmit(e) {
     e.preventDefault();
     var btn = document.getElementById('submit-btn');
     btn.textContent = "Sent — we'll be in touch.";
-    btn.style.background = '#20596C';
+    btn.style.background = '#226158';
     btn.disabled = true;
   }
 </script>

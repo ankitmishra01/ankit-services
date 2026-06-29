@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AM Consulting Group — 1-Pager</title>
+  <meta name="description" content="AM Consulting Group — commercial strategy and AI transformation for Africa's most ambitious tech companies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink:    #1A2B28;
+      --teal:   #2A7A6E;
+      --teal-d: #1C5249;
+      --wash:   #EDF5F3;
+      --mid:    #C4DDD8;
+      --muted:  #5C6B68;
+      --border: #D8E8E4;
+      --mono:   'DM Mono', 'Courier New', monospace;
+      --f:      'Poppins', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: #C8D5D1;
+      font-family: var(--f);
+      display: flex;
+      justify-content: center;
+      padding: 36px 16px;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 794px;
+      flex-shrink: 0;
+      background: #fff;
+      box-shadow: 0 12px 72px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── SHARED SECTION LABEL ─── */
+    .lbl {
+      display: block;
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      padding-bottom: 7px;
+      border-bottom: 1.5px solid var(--teal);
+      margin-bottom: 11px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 22px 32px 18px;
+      border-bottom: 1.5px solid var(--border);
+      text-align: center;
+      position: relative;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--teal);
+    }
+
+    .ph-name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .ph-sub {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ─── THREE-COLUMN MAIN ─── */
+    .main {
+      display: grid;
+      grid-template-columns: 204px 1fr 196px;
+    }
+
+    /* ─── LEFT ─── */
+    .col-l {
+      display: flex;
+      flex-direction: column;
+      padding: 26px 20px 24px 26px;
+      border-right: 1px solid var(--border);
+      gap: 18px;
+    }
+
+    .ov-body {
+      font-size: 10.5px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* Portfolio logos strip */
+    .port-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .port-logo {
+      height: 17px;
+      width: auto;
+      max-width: 56px;
+      object-fit: contain;
+      filter: grayscale(1);
+      opacity: 0.55;
+    }
+
+    .port-text {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: var(--muted);
+      opacity: 0.75;
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── MIDDLE ─── */
+    .col-m {
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+    }
+
+    .col-m-sub {
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .svc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--teal);
+      border-radius: 4px;
+      padding: 12px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .svc-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--teal-d);
+      line-height: 1.2;
+    }
+
+    .svc-desc {
+      font-size: 9.5px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .svc-client {
+      font-size: 7.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-top: 3px;
+    }
+
+    /* ─── RIGHT ─── */
+    .col-r {
+      padding: 26px 22px 24px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .r-heading {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .stats { display: flex; flex-direction: column; }
+
+    .stat {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat:last-child { border-bottom: none; }
+
+    .stat-n {
+      font-family: var(--mono);
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--teal);
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-l {
+      font-size: 9px;
+      color: var(--muted);
+      line-height: 1.48;
+    }
+
+    /* Trust logos row */
+    .trust-logos {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .trust-logo {
+      height: 13px;
+      width: auto;
+      max-width: 64px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(0.45);
+      opacity: 0.65;
+    }
+
+    /* ─── CASE STUDIES ─── */
+    .cases {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: var(--wash);
+      border-top: 1.5px solid var(--border);
+      gap: 1px;
+    }
+
+    .case {
+      background: #fff;
+      padding: 18px 20px;
+      border-top: 2.5px solid var(--teal);
+    }
+
+    .c-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 11px;
+    }
+
+    .c-logo {
+      height: 20px;
+      width: auto;
+      max-width: 66px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .c-client {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    .c-label {
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3px;
+      margin-top: 9px;
+    }
+
+    .c-label:first-of-type { margin-top: 0; }
+
+    .c-text {
+      font-size: 10px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    .c-outcome {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--teal-d);
+      line-height: 1.5;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: var(--ink);
+      padding: 11px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .f-item {
+      font-size: 9px;
+      color: rgba(255,255,255,0.44);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    a.f-item:hover { color: rgba(255,255,255,0.82); }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <p class="ph-name">AM Consulting Group</p>
+      <p class="ph-sub">Commercial Strategy · Africa</p>
+    </div>
+
+    <div class="main">
+
+      <!-- LEFT: overview + portfolio logos -->
+      <div class="col-l">
+        <div>
+          <span class="lbl">Overview</span>
+          <p class="ov-body">AM Consulting Group accelerates commercial growth for African tech companies and VC portfolios. We combine go-to-market strategy, AI transformation, and deep knowledge of African fintech and cleantech to deliver outcomes measured in revenue, not reports.</p>
+        </div>
+        <div>
+          <span class="lbl">Portfolio Companies</span>
+          <div class="port-logos">
+            <img class="port-logo" src="logos/cyclecapital.png" alt="Cycle Central" onerror="this.style.display='none'">
+            <img class="port-logo" src="logos/tomocredit.png" alt="Tomo Credit" onerror="this.style.display='none'">
+            <img class="port-logo" src="https://logo.clearbit.com/sensitel.com" alt="Sensitel" onerror="this.outerHTML='<span class=\'port-text\'>Sensitel</span>'">
+            <img class="port-logo" src="https://logo.clearbit.com/cleanai.com" alt="CleanAI" onerror="this.outerHTML='<span class=\'port-text\'>CleanAI</span>'">
+            <img class="port-logo" src="https://logo.clearbit.com/sophrosynesystems.org" alt="Sophrosyne" onerror="this.outerHTML='<span class=\'port-text\'>Sophrosyne</span>'">
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE: services -->
+      <div class="col-m">
+        <span class="lbl">Our Services</span>
+        <p class="col-m-sub">End-to-end commercial strategy for venture portfolios, fintech platforms, and cleantech innovators across Africa.</p>
+        <div class="svc-grid">
+          <div class="svc">
+            <p class="svc-title">GTM Strategy &amp; Revenue Design</p>
+            <p class="svc-desc">Revenue architecture, pricing models, and demand-gen playbooks for African markets.</p>
+            <p class="svc-client">McGill Engine · Holocene Portfolio · Ivey Business School</p>
+          </div>
+          <div class="svc">
+            <p class="svc-title">AI Transformation</p>
+            <p class="svc-desc">AI workflow integration and team upskilling to build AI-native operators.</p>
+            <p class="svc-client">Holocene · AI Fluency Lab</p>
+          </div>
+          <div class="svc">
+            <p class="svc-title">Sales Intelligence</p>
+            <p class="svc-desc">Lead scoring and pipeline automation via white-label AI prospecting platforms.</p>
+            <p class="svc-client">Holocene Portfolio · 5× prospecting speed</p>
+          </div>
+          <div class="svc">
+            <p class="svc-title">Commercial Due Diligence</p>
+            <p class="svc-desc">Market entry assessment, competitive mapping, and commercial risk analysis.</p>
+            <p class="svc-client">Cycle Central · Premise Data</p>
+          </div>
+          <div class="svc">
+            <p class="svc-title">Market Entry</p>
+            <p class="svc-desc">Multi-country expansion playbooks covering compliance, partnerships, and institutional onboarding.</p>
+            <p class="svc-client">Pngme · 5 African markets</p>
+          </div>
+          <div class="svc">
+            <p class="svc-title">Product Marketing &amp; Fractional Leadership</p>
+            <p class="svc-desc">Embedded product marketing and commercial leadership for growth-stage ventures.</p>
+            <p class="svc-client">Alariss · Cycle Central</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: mission + trust stats + logos -->
+      <div class="col-r">
+        <div>
+          <span class="lbl">Mission</span>
+          <p class="r-heading">Build the commercial engine behind Africa's most ambitious tech companies.</p>
+        </div>
+        <div>
+          <span class="lbl">Why Clients Trust AM</span>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-n">50+</div>
+              <div class="stat-l">Forbes articles · 200,000+ readers — leadership and GTM strategy content driving client inbound</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n">186</div>
+              <div class="stat-l">economies scored, AI Trajectory Index (SRI · U of T — Harvard, BCG &amp; Meta)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n">5</div>
+              <div class="stat-l">African markets entered at Pngme · $15M Series A</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n">C$25M</div>
+              <div class="stat-l">P&amp;L managed at Cycle Central cleantech hub</div>
+            </div>
+          </div>
+          <div class="trust-logos">
+            <img class="trust-logo" src="logos/forbes.svg" alt="Forbes" onerror="this.style.display='none'">
+            <img class="trust-logo" src="https://logo.clearbit.com/utoronto.ca" alt="University of Toronto" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CASE STUDIES STRIP -->
+    <div class="cases">
+      <div class="case">
+        <div class="c-head">
+          <img class="c-logo" src="logos/holocene.png" alt="Holocene" onerror="this.style.display='none'">
+          <p class="c-client">Holocene · VC Portfolio</p>
+        </div>
+        <p class="c-label">Challenge</p>
+        <p class="c-text">No shared commercial infrastructure or AI tooling across a 14-company VC portfolio</p>
+        <p class="c-label">Outcome</p>
+        <p class="c-outcome">White-label sales intelligence platform deployed across portfolio — 3× SQL conversion · 5× faster prospecting</p>
+      </div>
+      <div class="case">
+        <div class="c-head">
+          <img class="c-logo" src="logos/pngme.png" alt="Pngme" onerror="this.style.display='none'">
+          <p class="c-client">Pngme · Financial Data</p>
+        </div>
+        <p class="c-label">Challenge</p>
+        <p class="c-text">Commercial expansion and product marketing across five African markets during Series A</p>
+        <p class="c-label">Outcome</p>
+        <p class="c-outcome">Weekly GTM content drove institutional adoption · ABSA, DTB &amp; Kuda · $15M raised</p>
+      </div>
+      <div class="case">
+        <div class="c-head">
+          <img class="c-logo" src="logos/premise.svg" alt="Premise Data" onerror="this.style.display='none'">
+          <p class="c-client">Premise Data · Market Intelligence</p>
+        </div>
+        <p class="c-label">Challenge</p>
+        <p class="c-text">Commercial validation and competitive mapping across African markets for investor diligence</p>
+        <p class="c-label">Outcome</p>
+        <p class="c-outcome">Market assessment delivered · Entry strategy approved by investment committee</p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <a href="mailto:ankit@holocene.africa" class="f-item">ankit@holocene.africa</a>
+      <a href="https://ankit-services-two.vercel.app" class="f-item">ankit-services-two.vercel.app</a>
+      <span class="f-item">Forbes Contributor · Schwartz Reisman Institute · University of Toronto</span>
+    </div>
+  </div>
+</body>
+</html>
